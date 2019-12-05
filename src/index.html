@@ -21,7 +21,7 @@
   />
   <body>
     <div class="card">
-      <!-- <div class="card-body"> -->
+      <div class="card-header" id="alert">temp text </div>
         <form class="needs-validation" id="myForm">
           <div class="form-row">
             <div class="col-md-4 mb-3">
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-3 mb-3">
               <label for="state">State</label>
-              <select class="custom-select" id="validationCustom04" required>
+              <select class="custom-select" id="validationCustom04">
                 <option selected disabled value="">Choose...</option>
                 <option>...</option>
               </select>
@@ -76,9 +76,12 @@
       const form = document.querySelector("#myForm");
       form.addEventListener("submit", e => {
         e.preventDefault();
-
+        document.querySelector("#alert").innerHTML = '<div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>'
+        if document.querySelector("#fName").value == ""
         console.log("vfh jhfvdn");
       });
+
+
     </script>
 
     <!-- do not remove this bundle.js tag -->
