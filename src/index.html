@@ -20,56 +20,74 @@
     crossorigin="anonymous"
   />
   <body>
-    <div class="card">
-      <div class="card-header" id="alert">temp text </div>
-        <form class="needs-validation" id="myForm">
-          <div class="form-row">
-            <div class="col-md-4 mb-3">
-              <label for="first-name">First name</label>
-              <input type="text" class="form-control" id="fName" value="" />
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="last-name">Last name</label>
-              <input type="text" class="form-control" id="lName" value="" />
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="validationCustomUsername">Username</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="username"/>
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <label for="city">City</label>
-              <input type="text" class="form-control" id="city" value="" />
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="state">State</label>
-              <select class="custom-select" id="validationCustom04">
-                <option selected disabled value="">Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="zipcode">Zip</label>
-              <input type="text" class="form-control" id="zip" value="" />
-            </div>
-          </div>
-          <!-- <div class="form-group">
-            <div class="form-check">
-            <input type="text" class="form-control" id="fName" value="" />
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
-            </div>
-          </div> -->
+    <div class="card text-left w-75 mx-auto">
+        <div class="card-header" id="alert">Example Payment Form</div>
+        
+        <div class="card-body">
+           <form class="needs-validation" id="myForm">
+                <div class="form-row">
+                    <div class="form-group text-left col-md-5">
+                        <label for="creditcard">Card Number</label>
+                        <input type="number" class="form-control" id="creditCard" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    </div>
+                    <div class="form-group text-left col-md-3">
+                        <label for="validationTooltip02">CVV</label>
+                        <input type="email" class="form-control" id="validationTooltip02" placeholder="xxx">
+                        <div class="valid-tooltip">
+                            Please enter a valid CVV
+                        </div>
+                    </div>
+                    <div class="form-group text-left col-md-4">
+                        <label for="validationTooltip03">Amount</label>
+                        <input type="password" class="form-control" id="validationTooltip03" placeholder="$00.00">
+                        <div class="invalid-tooltip">
+                            Enter payment amount!
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="first-name">First name</label>
+                        <input type="text" class="form-control" id="fName" value="" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="last-name">Last name</label>
+                        <input type="text" class="form-control" id="lName" value="" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="username"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" value="" />
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="state">State</label>
+                        <select class="custom-select" id="state">
+                            <option selected disabled value="">Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zipcode">Zip</label>
+                        <input type="text" class="form-control" id="zip" value="" />
+                    </div>
+                </div>
+      
           <button class="btn btn-primary" type="submit">Submit form</button>
-        </form>
-      </div>
+        
+           </form>
+        </div>
+    
     </div>
 
     <script>
@@ -77,8 +95,23 @@
       form.addEventListener("submit", e => {
         e.preventDefault();
         document.querySelector("#alert").innerHTML = '<div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>'
-        if document.querySelector("#fName").value == ""
-        console.log("vfh jhfvdn");
+         if (document.querySelector("#fName").value == "") { 
+                document.querySelector("#fName").style.borderColor = "red";}
+         if (document.querySelector("#lName").value == "") { 
+                document.querySelector("#lName").style.borderColor = "red";}
+         if (document.querySelector("#username").value == "") { 
+                document.querySelector("#username").style.borderColor = "red";}
+         if (document.querySelector("#city").value == "") { 
+                document.querySelector("#city").style.borderColor = "red";}
+         if (document.querySelector("#state").value == "") { 
+                document.querySelector("#state").style.borderColor = "red";}
+         if (document.querySelector("#zip").value == "") { 
+                document.querySelector("#zip").style.borderColor = "red";
+         
+            console.log("vfh jhfvdn");
+
+         }
+
       });
 
 
